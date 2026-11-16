@@ -1,6 +1,14 @@
 # Notizen: MS-Access-Formular (responsive)
 
-Stand: 2026-11-16 – **noch nicht programmieren**, nur Anforderungen festhalten.
+Stand: 2026-11-16 – umgesetzt in `access/` (alle offenen Fragen mit Standard beantwortet).
+
+## Umsetzung
+- `access/modResponsive.bas` – Standardmodul. Import: VBA-Editor (Alt+F11) > Datei > Datei importieren.
+- `access/Form_frmBeispiel.txt` – Code für das Formularmodul (Load + Resize).
+- Buttons: Marke/Tag `flex:1`, `flex:2`, … im Formularfuß → Umbruch wie CSS flex-wrap.
+- Felder: Marke/Tag `stretch` → wachsen bis zum rechten Rand.
+- Ausrichtung wählbar: `flexLeft` (Standard), `flexCenter`, `flexRight`.
+- Nicht in echtem Access getestet (keine Access-Umgebung vorhanden).
 
 ## Arbeitsweise
 - Nichts doppelt einlesen: bereits gelesene Dateien/Routinen nur einmal laden.
