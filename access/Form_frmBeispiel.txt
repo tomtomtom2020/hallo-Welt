@@ -1,0 +1,19 @@
+' ===== Code fuer das Formularmodul (z. B. Form_frmBeispiel) =====
+' Im Formular: VBA-Editor oeffnen (Alt+F11) -> Formularmodul -> diesen Code einfuegen.
+'
+' Voraussetzungen im Entwurf:
+'   - Formularfuss einblenden (Rechtsklick > Formularkopf/-fuss)
+'   - Buttons in den Formularfuss legen, Eigenschaft "Marke" (Tag) = flex:1, flex:2, ...
+'   - Felder, die mitwachsen sollen: "Marke" = stretch
+'   - Formular-Eigenschaft "Automatisch anpassen" = Nein, "Bildlaufleisten" = Nur vertikal
+
+Option Compare Database
+Option Explicit
+
+Private Sub Form_Load()
+    ResponsiveLayout Me, acFooter, flexLeft     ' flexLeft | flexCenter | flexRight
+End Sub
+
+Private Sub Form_Resize()
+    ResponsiveLayout Me, acFooter, flexLeft
+End Sub
